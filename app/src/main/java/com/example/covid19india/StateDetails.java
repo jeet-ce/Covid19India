@@ -41,6 +41,7 @@ import adapter.StateListAdapter;
 import api.ApiEndPoint;
 import api.ApiService;
 import model.DataModel;
+import model.DistrictDeltaData;
 import model.HistoryModel;
 import model.StateDataModel;
 import model.StateDetailsData;
@@ -207,10 +208,12 @@ public class StateDetails extends AppCompatActivity implements ConnectivityRecei
                         Log.e(TAG, "onResponse: In IF==================" );
                           List<StateDistrictData> stateDistrictDataList = response.body().get(i).getDistrictData();
                         for (int j=0;j<stateDistrictDataList.size();j++){
+                            DistrictDeltaData deltaData=stateDistrictDataList.get(j).getDelta();
                             Log.e(TAG, "onResponse: In Load District==================" );
                             String districtName =stateDistrictDataList.get(j).getDistrict();
                             Integer confirm=stateDistrictDataList.get(j).getConfirmedinstate();
-                            state.add(new StateDataModel(districtName,String.valueOf(confirm)));
+                            Integer todayConfirm=deltaData.getConfirmed();
+                            state.add(new StateDataModel(districtName,String.valueOf(confirm),String.valueOf(todayConfirm)));
                         }
                         Log.e(TAG, "onResponse: To set ADAPTER====" );
                         adapter.setHistoryModels(state);

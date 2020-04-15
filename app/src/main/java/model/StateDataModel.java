@@ -5,10 +5,20 @@ package model;
 public class StateDataModel {
     private String district;
     private String confirmed;
+    private String todayConfirm;
 
-    public StateDataModel(String district, String confirmed) {
+    public StateDataModel(String district, String confirmed, String todayConfirm) {
         this.district = district;
         this.confirmed = confirmed;
+        this.todayConfirm = todayConfirm;
+    }
+
+    public String getTodayConfirm() {
+        return todayConfirm;
+    }
+
+    public void setTodayConfirm(String todayConfirm) {
+        this.todayConfirm = todayConfirm;
     }
 
     public String getDistrict() {

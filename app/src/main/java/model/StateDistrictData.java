@@ -9,6 +9,17 @@ public class StateDistrictData {
     private String district;
     @SerializedName("confirmed")
     private Integer confirmedinstate;
+    @SerializedName("delta")
+    private DistrictDeltaData delta;
+
+    public DistrictDeltaData getDelta() {
+        return delta;
+    }
+
+    public void setDelta(DistrictDeltaData delta) {
+        this.delta = delta;
+    }
+
 
     public Integer getConfirmedinstate() {
         return confirmedinstate;

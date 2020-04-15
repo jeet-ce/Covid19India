@@ -53,6 +53,7 @@ public class StateListAdapter extends RecyclerView.Adapter<StateListAdapter.View
         Log.e(TAG, "onBindViewHolder: =================");
         holder.tvConfirmed.setText(stateDataModels.get(position).getConfirmed());
         holder.tvListCountry.setText(stateDataModels.get(position).getDistrict());
+        holder.tvTConfirmed.setText("[+"+stateDataModels.get(position).getTodayConfirm()+"]");
     }
 
     @Override
@@ -63,11 +64,13 @@ public class StateListAdapter extends RecyclerView.Adapter<StateListAdapter.View
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView tvConfirmed;
         TextView tvListCountry;
+        TextView tvTConfirmed;
 
         ViewHolder(@NonNull View itemView) {
             super(itemView);
             tvConfirmed = itemView.findViewById(R.id.tvListConfirmed);
             tvListCountry = itemView.findViewById(R.id.tvListCountry);
+            tvTConfirmed = itemView.findViewById(R.id.tvListTConfirmed);
         }
     }
 
