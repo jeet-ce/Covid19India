@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Covid19India</string>
+    <string name="summary">World</string>
+    <string name="india">India</string>
+    <string name="info">Info</string>
+    <string name="history">History</string>
+    <string name="state">State</string>
+    <string name="not_update">Data History Not Updated</string>
+    <string name="confirmed">Confirmed</string>
+    <string name="recovered">Recovered</string>
+    <string name="deaths">Deaths</string>
+    <string name="information">info :</string>
+    <string name="world_summary_data">Summary of World Data</string>
+    <string name="from_corona">From Covid-19</string>
+    <string name="last_update">Last Update</string>
+    <string name="india_summary_data">Summary of Indian Data</string>
+    <string name="develop">Develop By</string>
+    <string name="name">Jeet Patel</string>
+</resources>
